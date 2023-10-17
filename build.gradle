@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'my-plugin'
 }
 
 group = 'by.leshkevich'
