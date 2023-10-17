@@ -1,0 +1,5 @@
+#core
+/build/generated
+/build/classes
+/build/tmp/.cache
+/build/tmp/compileJava
