@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group = 'by.leshkevich'
+version = 'unspecified'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation(project(":core"))
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class':'by/leshkevich/App'
+    }
+
+    from(project.rootProject.files("build/libs/clever_task2-1.3.5.jar").collect{zipTree(it)})
+    from(project.rootProject.files("core/build/libs/core.jar").collect{zipTree(it)})
+}
+
+test {
+    useJUnitPlatform()
+}

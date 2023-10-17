@@ -1,0 +1,4 @@
+rootProject.name = 'clever_task2'
+include 'core'
+include 'api'
+
